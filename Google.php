@@ -246,4 +246,4 @@ class Services_Google implements Iterator
         return $this->_index;
     }
 }
-?> 
+?>
