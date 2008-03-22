@@ -76,13 +76,13 @@ class Services_Google implements Iterator
      * @access  public
      */
     public $queryOptions = array(
-                                    "start" => 0,
-                                    "maxResults" => 10,
-                                    "limit" => false,
-                                    "filter" => true,
-                                    "restricts" => "",
-                                    "safeSearch" => true,
-                                    "language" => ""
+                                    "start"         => 0,
+                                    "maxResults"    => 10,
+                                    "limit"         => false,
+                                    "filter"        => true,
+                                    "restricts"     => "",
+                                    "safeSearch"    => true,
+                                    "language"      => ""
                                 );
 
     /**
@@ -175,13 +175,28 @@ class Services_Google implements Iterator
      * @return  int
      * @access  public
      */
-    public function numResults()
+    public function getResultsCount()
     {
         if (is_null($this->_result) && !empty($this->_lastQuery)) {
             $this->runQuery();
         }
 
         return $this->_result->estimatedTotalResultsCount;
+    }
+
+    /**
+     * Returns search time
+     *
+     * @return  float
+     * @access  public
+     */
+    public function getSearchTime()
+    {
+        if (is_null($this->_result) && !empty($this->_lastQuery)) {
+            $this->runQuery();
+        }
+
+        return $this->_result->searchTime;
     }
 
     /**
