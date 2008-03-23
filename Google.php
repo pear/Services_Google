@@ -262,6 +262,10 @@ class Services_Google implements Iterator
             $this->runQuery();
         }
 
+        if ($this->_index >= $this->_result->estimatedTotalResultsCount - 1) {
+            return false;
+        }
+
         return (bool)count($this->_result->resultElements);
     }
 
