@@ -1,0 +1,25 @@
+{
+    "authors": [
+        {
+            "email": "jon@jellybob.co.uk",
+            "name": "Jon Wood",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    },
+    "description": "More info available on: http://pear.php.net/package/Services_Google",
+    "license": "PHP License",
+    "name": "pear/services_google",
+    "support": {
+        "issues": "http:///bugs/search.php?cmd=display&package_name[]=Services_Google",
+        "source": "https://github.com/pear/Services_Google"
+    },
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
